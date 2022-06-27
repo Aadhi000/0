@@ -8,6 +8,7 @@ umongo==3.0.0
 requests
 bs4
 Pyromod
+aiohttp==3.7.4
 imdbpy
 youtube-dl
 youtube_search
@@ -39,7 +40,6 @@ py-tgcalls
 python-dotenv
 youtube_search_python
 requests
-aiohttp
 aiofiles
 asyncio
 youtube_search
