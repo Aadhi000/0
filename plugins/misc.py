@@ -146,7 +146,7 @@ async def who_is(client, message):
         )
     await status_message.delete()
 
-@Client.on_message(filters.command("niya"))
+@Client.on_message(filters.command("help"))
 async def help(client, message):
         buttons = [[
             InlineKeyboardButton('ᴍᴀ ғɪʟᴛᴇʀ', callback_data='manuelfilter'),
