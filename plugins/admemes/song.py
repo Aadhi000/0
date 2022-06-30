@@ -68,7 +68,8 @@ def song(client, message):
             ydl.process_info(info_dict)
         rep = f"""
 **ᴛɪᴛʟᴇ ›› [{title}]({link})**
-**sᴜʙsᴄʀɪʙᴇ ›› [huᴏᴘᴜsᴛᴇᴄʜᴢ](https://youtube.com/OpusTechz)**
+**ᴅᴜʀᴀᴛɪᴏɴ ›› {duration} | {views}**
+**sᴜʙsᴄʀɪʙᴇ ›› [ᴏᴘᴜsᴛᴇᴄʜᴢ](https://youtube.com/OpusTechz)**
 **ᴘᴏᴡᴇʀᴅ ʙʏ ›› [ᴀᴊᴀx](https://t.me/Devil0bot_Bot)**
 """
         secmul, dur, dur_arr = 1, 0, duration.split(':')
