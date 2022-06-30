@@ -1581,7 +1581,11 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("<b>ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ. ᴄʜᴇᴄᴋ ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ</b>\n› <a href=https://t.me/MWUpdatez><b>ᴍᴡ ᴜᴘᴅᴀᴛᴇᴢ</b></a>", disable_web_page_preview=True)
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('Translate To Malayalam ', callback_data='malayalam') ] ] )
+        buttons = [[
+      
+            InlineKeyboardButton('Translate to Malayalam', callback_data='malayalam')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
         await asyncio.sleep(8)
         await k.delete()
         return
