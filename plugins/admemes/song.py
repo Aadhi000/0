@@ -67,7 +67,8 @@ def song(client, message):
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
         rep = f"""
-**sᴜʙsᴄʀɪʙᴇ ›› [ᴏᴘᴜsᴛᴇᴄʜᴢ](https://youtube.com/OpusTechz)**
+**ᴛɪᴛʟᴇ ›› [{title}]({link})**
+**sᴜʙsᴄʀɪʙᴇ ›› [huᴏᴘᴜsᴛᴇᴄʜᴢ](https://youtube.com/OpusTechz)**
 **ᴘᴏᴡᴇʀᴅ ʙʏ ›› [ᴀᴊᴀx](https://t.me/Devil0bot_Bot)**
 """
         secmul, dur, dur_arr = 1, 0, duration.split(':')
@@ -77,7 +78,7 @@ def song(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit("**🚫 𝙴𝚁𝚁𝙾𝚁 🚫**")
+        m.edit("**🚫 ᴇʀʀᴏʀ 🚫**")
         print(e)
 
     try:
