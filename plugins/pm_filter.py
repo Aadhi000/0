@@ -1590,14 +1590,14 @@ async def advantage_spell_chok(msg):
         reply_markup = InlineKeyboardMarkup(buttons)
        
         k = await msg.reply(
-            text=script.MALAYALAM_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            text=script.ENGLISH_TXT.format(),
 
             reply_markup=reply_markup,
 
             parse_mode='html'
 
         )
-        await asyncio.sleep(8)
+        await asyncio.sleep(30)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
