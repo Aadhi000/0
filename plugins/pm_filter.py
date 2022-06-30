@@ -1585,6 +1585,8 @@ async def advantage_spell_chok(msg):
       
 
             InlineKeyboardButton('Translate to Malayalam', callback_data='malayalam')
+            ],[
+            InlineKeyboardButton("🕵️‍♂️ sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ 🕵️‍♂️", url=f"https://google.com/search?q={search}")
 
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
