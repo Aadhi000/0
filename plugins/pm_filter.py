@@ -787,7 +787,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Translated to Malayalam')
+        await query.answer('Translated to English')
     elif query.data == "malayalam":
         buttons = [[
       
@@ -799,7 +799,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Translated to English')        
+        await query.answer('Translated to Malayalam')        
     elif query.data == "ajax":
         buttons = [[
       
@@ -1536,7 +1536,11 @@ async def auto_filter(client, msg, spoll=False):
     else:
         fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     
-   
+   imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
+    TEMPLATE = settings['template']
+    if imdb:
+        cap = TEMPLATE.format(
+            query = search
   
     if spoll:
         await msg.message.delete()
