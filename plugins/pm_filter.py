@@ -1249,7 +1249,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "stats":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start'),
-            InlineKeyboardButton('ʀᴇғʀᴇsʜ', callback_data='rfrsh')
+            InlineKeyboardButton('ʀᴇғʀᴇsʜ', callback_data='rfrsh'),
+            InlineKeyboardButton('Translate to Malayalam', callback_data='malayalam')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -1591,7 +1592,7 @@ async def advantage_spell_chok(msg):
             callback_data=f"spolling#{user}#{k}",
         )
     ] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f'spolling#{user}#close_spellcheck')], [InlineKeyboardButton('Translate to Malayalam', callback_data='malayalam')])
+    btn.append([InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f'spolling#{user}#close_spellcheck')])
     s = await msg.reply("<b>ɪ ᴄᴏᴜʟᴅɴ'ᴛ ғɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ\n\nᴄʜᴇᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғʀᴏᴍ ᴛʜᴇ ɢɪᴠᴇɴ ʟɪsᴛ</b>",
                         reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
     await asyncio.sleep(30)
