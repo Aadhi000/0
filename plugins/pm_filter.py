@@ -776,6 +776,30 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await removebg_sticker(client, query.message)
     elif query.data == "pages":
         await query.answer()
+    elif query.data == "english":
+        buttons = [[
+      
+            InlineKeyboardButton('Translate to Malayalam', callback_data='malayalam')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(        
+            text=script.ENGLISH_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+        await query.answer('Translated to Malayalam')
+    elif query.data == "malayalam":
+        buttons = [[
+      
+            InlineKeyboardButton('Translate to English', callback_data='english')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(        
+            text=script.MALAYALAM_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+        await query.answer('Translated to English')        
     elif query.data == "ajax":
         buttons = [[
       
