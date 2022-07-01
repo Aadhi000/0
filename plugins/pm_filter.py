@@ -1536,15 +1536,12 @@ async def auto_filter(client, msg, spoll=False):
     else:
         fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     
-   imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
-    TEMPLATE = settings['template']
-    if imdb:
-        cap = TEMPLATE.format(
-            query = search
+  
+            
   
     if spoll:
         await msg.message.delete()
-
+query = search
 
 async def advantage_spell_chok(msg):
     query = re.sub(
@@ -1618,6 +1615,7 @@ async def advantage_spell_chok(msg):
                         reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
     await asyncio.sleep(30)
     await s.delete()
+
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
