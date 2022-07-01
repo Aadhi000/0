@@ -1541,7 +1541,7 @@ async def auto_filter(client, msg, spoll=False):
   
     if spoll:
         await msg.message.delete()
-query = search
+
 
 async def advantage_spell_chok(msg):
     query = re.sub(
@@ -1587,7 +1587,7 @@ async def advantage_spell_chok(msg):
 
             InlineKeyboardButton('Translate to Malayalam', callback_data='malayalam')
             ],[
-            InlineKeyboardButton("🕵️‍♂️ sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ 🕵️‍♂️", url=f"https://google.com/search?q={search}")
+            InlineKeyboardButton("🕵️‍♂️ sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ 🕵️‍♂️", url=f"https://google.com/search?q=")
 
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
