@@ -16,6 +16,8 @@ from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
 import youtube_dl
+from youtube_dl import YoutubeDL
+
 import requests
 
 def time_to_seconds(time):
