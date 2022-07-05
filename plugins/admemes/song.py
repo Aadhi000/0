@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 import os
 import requests
 import aiohttp
-import yt_dlp
 import asyncio
 import math
 import time
@@ -16,7 +15,6 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
-from yt_dlp import YoutubeDL
 import youtube_dl
 import requests
 
