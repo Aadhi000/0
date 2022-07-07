@@ -6,7 +6,7 @@ import aiohttp
 import asyncio
 import math
 import time
-
+import yt_dlp
 import wget
 import aiofiles
 
@@ -16,7 +16,7 @@ from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
 import youtube_dl
-from youtube_dl import YoutubeDL
+from yt_dlp import YoutubeDL
 
 import requests
 
