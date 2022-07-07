@@ -28,6 +28,7 @@ wget
 aiofiles
 psutil
 wheel
+yt-dlp
 humanize
 ytthumb
 pypdf2
