@@ -9,7 +9,7 @@ requests
 bs4
 Pyromod
 aiohttp==3.7.4
-imdbpy
+imdbpy==2021.4.18
 youtube-dl
 youtube_search
 requests
