@@ -1,6 +1,6 @@
 import logging
 import asyncio
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdminRequired, UsernameInvalid, UsernameNotModified
 from info import ADMINS, LOG_CHANNEL
@@ -59,7 +59,7 @@ async def send_for_index(bot, message):
         last_msg_id = int(match.group(5))
         if chat_id.isnumeric():
             chat_id  = int(("-100" + chat_id))
-    elif message.forward_from_chat.type == 'channel':
+    elif message.forward_from_chat.type == enums.ChatType.CHANNEL:
         last_msg_id = message.forward_from_message_id
         chat_id = message.forward_from_chat.username or message.forward_from_chat.id
     else:
@@ -109,7 +109,7 @@ async def send_for_index(bot, message):
         ],
         [
             InlineKeyboardButton('Reject Index',
-                                 callback_data=f'index#reject#{chat_id}#{message.message_id}#{message.from_user.id}'),
+                                 callback_data=f'index#reject#{chat_id}#{message.id}#{message.from_user.id}'),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -160,13 +160,13 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
                 except Exception as e:
                     logger.exception(e)
                 try:
-                    for file_type in ("document", "video", "audio"):
-                        media = getattr(message, file_type, None)
+                    for file_type in (enums.MessageMediaType.VIDEO, enums.MessageMediaType.AUDIO, enums.MessageMediaType.DOCUMENT):
+                        media = getattr(message, message.media.value, None)
                         if media is not None:
                             break
                         else:
                             continue
-                    media.file_type = file_type
+                    media.file_type = message.media.value
                     media.caption = message.caption
                     aynav, vnay = await save_file(media)
                     if aynav:
