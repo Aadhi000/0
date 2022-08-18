@@ -71,6 +71,7 @@ def song(client, message):
 **ᴅᴜʀᴀᴛɪᴏɴ ›› {duration} | {views}**
 **sᴜʙsᴄʀɪʙᴇ ›› [ᴏᴘᴜsᴛᴇᴄʜᴢ](https://youtube.com/OpusTechz)**
 **ᴘᴏᴡᴇʀᴅ ʙʏ ›› [ᴀᴊᴀx](https://t.me/Devil0bot_Bot)**
+**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ›› {message.from_user.mention}**
 """
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
