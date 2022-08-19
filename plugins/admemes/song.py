@@ -68,8 +68,7 @@ def song(client, message):
             ydl.process_info(info_dict)
         rep = f"""
 **ᴛɪᴛʟᴇ ›› [{title}]({link})**
-**ᴅᴜʀᴀᴛɪᴏɴ ›› {duration}
-              {views}**
+**ᴅᴜʀᴀᴛɪᴏɴ ›› {duration}**
 **sᴜʙsᴄʀɪʙᴇ ›› [ᴏᴘᴜsᴛᴇᴄʜᴢ](https://youtube.com/OpusTechz)**
 **ᴘᴏᴡᴇʀᴅ ʙʏ ›› [ᴀᴊᴀx](https://t.me/Devil0bot_Bot)**
 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ›› {rpk}**
