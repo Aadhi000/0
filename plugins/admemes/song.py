@@ -49,7 +49,7 @@ def song(client, message):
         open(thumb_name, 'wb').write(thumb.content)
 
 
-        performer = f"ᴀᴊᴀx sᴏɴɢs" 
+        performer = f"› ᴀᴊᴀx sᴏɴɢs ‹" 
         duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
         views = results[0]["views"]
@@ -68,7 +68,8 @@ def song(client, message):
             ydl.process_info(info_dict)
         rep = f"""
 **ᴛɪᴛʟᴇ ›› [{title}]({link})**
-**ᴅᴜʀᴀᴛɪᴏɴ ›› {duration} | {views}**
+**ᴅᴜʀᴀᴛɪᴏɴ ›› {duration}
+              {views}**
 **sᴜʙsᴄʀɪʙᴇ ›› [ᴏᴘᴜsᴛᴇᴄʜᴢ](https://youtube.com/OpusTechz)**
 **ᴘᴏᴡᴇʀᴅ ʙʏ ›› [ᴀᴊᴀx](https://t.me/Devil0bot_Bot)**
 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ›› {rpk}**
