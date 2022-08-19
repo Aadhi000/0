@@ -49,7 +49,7 @@ def song(client, message):
         open(thumb_name, 'wb').write(thumb.content)
 
 
-        performer = f"[ᗩᒍᗩ᙭]" 
+        performer = f"[ᴀᴊᴀx sᴏɴɢs]" 
         duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
         views = results[0]["views"]
@@ -71,7 +71,7 @@ def song(client, message):
 **ᴅᴜʀᴀᴛɪᴏɴ ›› {duration} | {views}**
 **sᴜʙsᴄʀɪʙᴇ ›› [ᴏᴘᴜsᴛᴇᴄʜᴢ](https://youtube.com/OpusTechz)**
 **ᴘᴏᴡᴇʀᴅ ʙʏ ›› [ᴀᴊᴀx](https://t.me/Devil0bot_Bot)**
-**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ›› {message.from_user.mention}**
+**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ›› {user_name}**
 """
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
@@ -106,7 +106,7 @@ async def vsong(client, message: Message):
     urlissed = get_text(message)
 
     pablo = await client.send_message(
-        message.chat.id, f"**𝙵𝙸𝙽𝙳𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝚅𝙸𝙳𝙴𝙾** `{urlissed}`"
+        message.chat.id, f"**sᴇᴀʀᴄʜɪɴɢ ʏᴏᴜʀ ᴠᴜᴅᴇᴏ** `{urlissed}`"
     )
     if not urlissed:
         await pablo.edit("Invalid Command Syntax Please Check help Menu To Know More!")
@@ -144,8 +144,8 @@ async def vsong(client, message: Message):
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
     capy = f"""
-**𝚃𝙸𝚃𝙻𝙴 :** [{thum}]({mo})
-**𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 :** {message.from_user.mention}
+**ᴛɪᴛʟᴇ :** [{thum}]({mo})
+**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
 """
     await client.send_video(
         message.chat.id,
