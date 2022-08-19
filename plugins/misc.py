@@ -1,5 +1,5 @@
 import os
-from pyrogram import Client, filters, enums
+from pyrogram import Client, filters
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 from info import PICS
@@ -16,7 +16,7 @@ logger.setLevel(logging.ERROR)
 @Client.on_message(filters.command('id'))
 async def showid(client, message):
     chat_type = message.chat.type
-    if chat_type == enums.ChatType.PRIVATE:
+    if chat_type == "private":
         user_id = message.chat.id
         first = message.from_user.first_name
         last = message.from_user.last_name or ""
@@ -27,7 +27,7 @@ async def showid(client, message):
             quote=True
         )
 
-    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+    elif chat_type in ["group", "supergroup"]:
         _id = ""
         _id += (
             "<b>➛ Chat ID</b>: "
@@ -101,11 +101,11 @@ async def who_is(client, message):
     message_out_str += f"<b>➾ Data Centre:</b> <code>{dc_id}</code>\n"
     message_out_str += f"<b>➾ User Name:</b> @{username}\n"
     message_out_str += f"<b>➾ User 𝖫𝗂𝗇𝗄:</b> <a href='tg://user?id={from_user.id}'><b>Click Here</b></a>\n"
-    if message.chat.type in ((enums.ChatType.SUPERGROUP, enums.ChatType.CHANNEL)):
+    if message.chat.type in (("supergroup", "channel")):
         try:
             chat_member_p = await message.chat.get_member(from_user.id)
-            joined_date = (
-                chat_member_p.joined_date or datetime.now()
+            joined_date = datetime.fromtimestamp(
+                chat_member_p.joined_date or time.time()
             ).strftime("%Y.%m.%d %H:%M:%S")
             message_out_str += (
                 "<b>➾ Joined this Chat on:</b> <code>"
@@ -128,7 +128,7 @@ async def who_is(client, message):
             quote=True,
             reply_markup=reply_markup,
             caption=message_out_str,
-            parse_mode=enums.ParseMode.HTML,
+            parse_mode="html",
             disable_notification=True
         )
         os.remove(local_user_photo)
@@ -141,7 +141,7 @@ async def who_is(client, message):
             text=message_out_str,
             reply_markup=reply_markup,
             quote=True,
-            parse_mode=enums.ParseMode.HTML,
+            parse_mode="html",
             disable_notification=True
         )
     await status_message.delete()
@@ -256,5 +256,3 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
     else:
         await quer_y.message.edit(caption, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=False)
     await quer_y.answer()
-
-
