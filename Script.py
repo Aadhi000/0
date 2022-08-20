@@ -127,7 +127,7 @@ Note:- Give a user details
 
 ◉ /pin :- ᴛᴏ ᴘɪɴ ᴀ ᴍᴇssᴀɢᴇ 
 ◉ /unpin :- ᴛᴏ ᴜɴᴘɪɴ ᴀ ᴍᴇssᴀɢᴇ"""
-  PASTE_TXT = """Help: <b>Paste</b>
+    PASTE_TXT = """Help: <b>Paste</b>
 
 Paste some texts or documents on a website!
 
