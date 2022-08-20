@@ -230,7 +230,8 @@ Delete A Lot Of Messages From Groups!
 <b>›› /autofilter on - ᴛᴏ ᴇɴᴀʙʟᴇ ᴛʜᴇ ᴀᴜᴛᴏғɪʟᴛᴇʀ</b>
 <b>›› /autofilter off - ᴛᴏ ᴅɪsᴀʙʟᴇᴅ ᴛʜᴇ ᴀᴜᴛᴏғɪʟᴛᴇʀ</b>
 
-<b>ᴄʀᴇᴅɪᴛs :- <a href=https://t.me/OpusTechz>ᴏᴘᴜs ᴛᴇᴄʜᴢ</a></b>"""    CONNECTION_TXT = """Help: <b>Connections</b>
+<b>ᴄʀᴇᴅɪᴛs :- <a href=https://t.me/OpusTechz>ᴏᴘᴜs ᴛᴇᴄʜᴢ</a></b>"""
+    CONNECTION_TXT = """Help: <b>Connections</b>
 
 - Used to connect bot to PM for managing filters 
 - it helps to avoid spamming in groups.
