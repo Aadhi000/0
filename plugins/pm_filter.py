@@ -820,7 +820,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('◈ ᴄʜᴀɴɴᴇʟ ◈', url='https://t.me/MWUpdatez')
         ], [
             InlineKeyboardButton('๏ ʜᴇʟᴘ ๏', callback_data='help'),
-            InlineKeyboardButton('๏ ᴀʙᴏᴜᴛ ๏', callback_data='about'')
+            InlineKeyboardButton('๏ ᴀʙᴏᴜᴛ ๏', callback_data='about')
         ], [
             InlineKeyboardButton('› ʙᴀᴄᴋ ᴛᴏ sᴛᴀʀᴛ ‹', callback_data='ajax')
         ]]
