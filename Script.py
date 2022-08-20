@@ -24,7 +24,8 @@ class script(object):
 <b>❖ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ3.1.37 </b>
 <b>❖ ᴜᴘᴅᴀᴛᴇᴢ : <a href=https://t.me/MWUpdatez>ᴍᴡ ᴜᴘᴅᴀᴛᴇᴢ</a></b>
 <b>❖ ʏᴛ ᴄʜᴀɴɴᴇʟ : <a href=https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA>ᴏᴘᴜs ᴛᴇᴄʜᴢ</a></b>"""
-   DONATION_TXT = """<b>𝐃𝐨𝐧𝐚𝐭𝐢𝐨𝐧 & 𝐏𝐚𝐢𝐝 𝐏𝐫𝐨𝐦𝐨𝐭𝐢𝐨𝐧</b> 
+
+    DONATION_TXT = """<b>𝐃𝐨𝐧𝐚𝐭𝐢𝐨𝐧 & 𝐏𝐚𝐢𝐝 𝐏𝐫𝐨𝐦𝐨𝐭𝐢𝐨𝐧</b> 
 
 ›› <b>𝐃𝐨𝐧𝐚𝐭𝐢𝐨𝐧</b>
 
