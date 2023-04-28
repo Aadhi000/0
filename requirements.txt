@@ -9,7 +9,7 @@ requests
 bs4
 Pyromod
 heroku3
-aiohttp==3.7.4
+aiohttp
 git+https://github.com/Joelkb/cinemagoer
 youtube-dl
 youtube_search
@@ -49,3 +49,4 @@ ffmpeg-python
 ffmpeg
 Pillow
 ujson
+pytz
